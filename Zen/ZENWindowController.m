@@ -63,16 +63,16 @@
 - (void)setWindow:(NSWindow *)window
 {
     if (self.window == nil && window != nil) {
-        [window addObserver:self forKeyPath:ZENContentLayoutRectPropertyString() options:0 context:NULL];
+        //[window addObserver:self forKeyPath:ZENContentLayoutRectPropertyString() options:0 context:NULL];
     } else {
-        [self.window removeObserver:self forKeyPath:ZENContentLayoutRectPropertyString()];
+        //[self.window removeObserver:self forKeyPath:ZENContentLayoutRectPropertyString()];
     }
     [super setWindow:window]; 
 }
 
 - (void)dealloc
 {
-    [self.window removeObserver:self forKeyPath:ZENContentLayoutRectPropertyString()];
+    //[self.window removeObserver:self forKeyPath:ZENContentLayoutRectPropertyString()];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

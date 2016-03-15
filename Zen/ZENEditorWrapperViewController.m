@@ -46,8 +46,8 @@
 {
     self.view = [[ZENEditorWrapperView alloc] initWithViewController:self];
     
-    [self.view addObserver:self forKeyPath:@"frame" options:0 context:NULL];
-    [self addChildViewController:self.editorContext];
+    //[self.view addObserver:self forKeyPath:@"frame" options:0 context:NULL];
+    //[self addChildViewController:self.editorContext];
 
     [self.view addSubview:self.editorContext.view];
     
@@ -73,7 +73,7 @@
 - (void)viewWillDisappear
 {
     [super viewWillDisappear];
-    [self.view removeObserver:self forKeyPath:@"frame"];
+    //[self.view removeObserver:self forKeyPath:@"frame"];
 }
 
 #pragma mark - Xcode hacking
